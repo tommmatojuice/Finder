@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_profile">
+
+    <fragment
+        android:id="@+id/navigation_projects"
+        android:name="com.example.projectfinder.ui.projects.ProjectsFragment"
+        android:label="@string/title_projects"
+        tools:layout="@layout/fragment_project" >
+        <action
+            android:id="@+id/action_navigation_projects_to_navigation_project_page"
+            app:destination="@id/navigation_project_page" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_specialists"
+        android:name="com.example.projectfinder.ui.specialists.SpecialistsFragment"
+        android:label="@string/title_professionals"
+        tools:layout="@layout/fragment_specialists" >
+        <action
+            android:id="@+id/action_navigation_specialists_to_navigation_specialists_list"
+            app:destination="@id/navigation_specialists_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_specialists_list"
+        android:name="com.example.projectfinder.ui.specialists.SpecialistsListFragment"
+        android:label="@string/title_professionals"
+        tools:layout="@layout/specialists_list" >
+        <action
+            android:id="@+id/action_navigation_specialists_list_to_navigation_specialist_page"
+            app:destination="@id/navigation_specialist_page" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.projectfinder.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_edit_project"
+            app:destination="@id/navigation_edit_project" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_edit_profile"
+            app:destination="@id/navigation_edit_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.projectfinder.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_start_reg"
+        android:name="com.example.projectfinder.ui.registration.RegStartFragment"
+        android:label="@string/reg_auth"
+        tools:layout="@layout/reg_start_page" >
+        <action
+            android:id="@+id/action_navigation_start_reg_to_navigation_reg"
+            app:destination="@id/navigation_reg" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_reg"
+        android:name="com.example.projectfinder.ui.registration.RegFragment"
+        android:label="@string/reg_auth"
+        tools:layout="@layout/reg_page" >
+        <action
+            android:id="@+id/action_navigation_reg_to_navigation_reg_contacts"
+            app:destination="@id/navigation_reg_contacts" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_reg_contacts"
+        android:name="com.example.projectfinder.ui.registration.RegContactsFragment"
+        android:label="@string/reg_text"
+        tools:layout="@layout/reg_contacts_page" >
+        <action
+            android:id="@+id/action_navigation_reg_contacts_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.projectfinder.ui.authorization.LoginFragment"
+        android:label="@string/auth_login_text"
+        tools:layout="@layout/login_page" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_password"
+            app:destination="@id/navigation_password" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_password"
+        android:name="com.example.projectfinder.ui.authorization.PassFragment"
+        android:label="@string/auth_pass_text"
+        tools:layout="@layout/pass_page" >
+        <action
+            android:id="@+id/action_navigation_password_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_project_page"
+        android:name="com.example.projectfinder.ui.projects.ProjectPageFragment"
+        android:label="@string/title_projects"
+        tools:layout="@layout/project_page" />
+
+    <fragment
+        android:id="@+id/navigation_specialist_page"
+        android:name="com.example.projectfinder.ui.specialists.SpecialistPageFragment"
+        android:label="@string/title_professionals"
+        tools:layout="@layout/specialist_page" />
+
+    <fragment
+        android:id="@+id/navigation_edit_profile"
+        android:name="com.example.projectfinder.ui.profile.EditProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/profile_page" />
+
+    <fragment
+        android:id="@+id/navigation_edit_project"
+        android:name="com.example.projectfinder.ui.profile.EditProjectPage"
+        android:label="@string/title_profile"
+        tools:layout="@layout/project_info_page" />
+
+</navigation>
